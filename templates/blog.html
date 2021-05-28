@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tourism Recommendation System</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/main.css">
+  </head>
+  <body>
+
+
+
+      <script type="text/javascript">
+      $(document).ready(function () {
+          $('#submitbtn').click(function() {
+            checked = $("input[type=checkbox]:checked").length;
+
+            if(!checked) {
+              alert("You must check at least one checkbox.");
+              return false;
+            }
+
+          });
+      });
+
+      </script>
+
+
+
+    <div class="testbox">
+    <form action="http://localhost:5000/result" method="post">
+      <div class="banner">
+        <h1>Tourism Recommendation System</h1>
+      </div>
+      <div class="item">
+        <p>Name</p>
+        <input type="text" name="name" required/>
+      </div>
+    <div class="item">
+        <p>Email</p>
+        <input type="text" name="email" required/>
+      </div>
+
+      <div class="question">
+        <p>Choose your tourist destination:</p>
+        <div class="question-answer">
+          <input type="radio" value="hyderabad" id="radio_7" name="place"/>
+          <label for="radio_7" class="radio"><span>Hyderabad</span></label>
+          <input type="radio" value="chennai" id="radio_8" name="place"/>
+          <label for="radio_8" class="radio"><span>Chennai</span></label>
+        </div>
+      </div>
+
+      <div class="item">
+        <p>Start Date</p>
+        <input type="date" name="sdate" required/>
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+     <div class="item">
+        <p>End Date</p>
+        <input type="date" name="edate" required/>
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+
+
+      <div class="question">
+        <p>Choose the kind of places you would like to visit<span class="required">*</span></p>
+        <div class="question-answer checkbox-item">
+          <div>
+            <input type="checkbox" value="historical" id="check_1" name="checklist" />
+            <label for="check_1" class="check"><span>Historical</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="spiritual" id="check_2" name="checklist" />
+            <label for="check_2" class="check"><span>Spiritual</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="shopping" id="check_3" name="checklist" />
+            <label for="check_3" class="check"><span>Shopping malls</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="fun" id="check_4" name="checklist" />
+            <label for="check_4" class="check"><span>Fun and Entertainment Zones</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="must visit" id="check_5" name="checklist" />
+            <label for="check_5" class="check"><span>Must Visit Places</span></label>
+          </div>
+
+          </div>
+        </div>
+        <br />
+
+		<div-- class="question">
+        <p>Choose your preferred cuisines<span class="required">*</span></p>
+        <div class="question-answer checkbox-item">
+          <div>
+            <input type="checkbox" value="none" id="check_6" name="checklist1" />
+            <label for="check_6" class="check"><span>Italian</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="none" id="check_7" name="checklist1" />
+            <label for="check_7" class="check"><span>Continental</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="none" id="check_8" name="checklist1" />
+            <label for="check_8" class="check"><span>Indian</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="none" id="check_9" name="checklist1" />
+            <label for="check_9" class="check"><span>European</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="none" id="check_10" name="checklist1" />
+            <label for="check_10" class="check"><span>Desserts</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="none" id="check_11" name="checklist1" />
+            <label for="check_11" class="check"><span>Italian</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="none" id="check_12" name="checklist1" />
+            <label for="check_12" class="check"><span>Fast food</span></label>
+          </div>
+          <div>
+            <input type="checkbox" value="none" id="check_13" name="checklist1" />
+            <label for="check_13" class="check"><span>Biryani</span></label>
+          </div>
+          </div>
+        </div-->
+        <br />
+
+        <div class="btn-block">
+          <button type="submit" value="Submit" id="submitbtn">Submit</button>
+        </div>
+    </form>
+    </div>
+  </body>
+</html>

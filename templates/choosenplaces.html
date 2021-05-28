@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourism Recommendation System</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="banner">
+        <h1>Tourism Recommendation System</h1>
+    </div><br><br><br>
+    <div style=" padding-left:20px; width: 50%; height: 100px; float: left;">
+        <center><p style="font-size:30px">Tourist Places Selected</p></center><br>
+        {% for place in result %}
+        <span><img height="30px" width="30px" src="static/images/icons/location.png"/></span><span style="font-size:25px">{{place}}</span><br><br>
+        {% endfor %}
+    </div>
+
+    <div style=" width: 50%; height: 100px; float: right;">
+        <center><p style="font-size:30px">Recommended Restaurants</p></center><br>
+        {% for place in rest_result %}
+        <span><img height="30px" width="30px" src="static/images/icons/location.png"/></span><span style="font-size:25px">{{place}}</span><br><br>
+        {% endfor %}
+    </div>
+</body>
+</html>

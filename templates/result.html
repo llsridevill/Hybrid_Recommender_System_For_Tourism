@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourism Recommender System</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="static/css/main.css">
+</head>
+
+
+<body>
+	<div>
+		<div class="banner">
+        <h1>Tourism Recommendation System</h1>
+      	</div>
+			<div >
+				<br><br><br>
+				<form method="post" action="http://localhost:5000/choosenplaces">
+				<div class="question">
+					<center><p style="font-size: 35px">Choose the kind of places you would like to visit</p></center><br>
+					<div class="question-answer checkbox-item">
+					  <table style="padding: 20px">
+						  <tr>
+							  <th>Place</th>
+							  <th>Description</th>
+							  <th>Calculated Average Rating and Sentiments from Reviews</th>
+							  <th>Map View</th>
+						  </tr>
+							  {% for place in info.keys() %}
+						  		{% if place in result %}
+							  <tr>
+								  <td>
+									<input type="checkbox" value="{{place}}" id="{{place}}" name="places" />
+									<label for="{{place}}" class="check"><span>{{place}}</span></label><br><br>
+								  </td>
+								  <td style="width:500px">
+									  <p>
+										  {{info.get(place)[0]}}
+									  </p>
+									  <br><br>
+								  </td>
+								  <td>
+									  <p>
+										  {{info.get(place)[2]}}<br><br>
+										  {{info.get(place)[3]}}<br><br>
+									  </p>
+								  </td>
+								  <td>
+									 <a style="color:black" href={{info.get(place)[1]}} target="_blank">Click to view {{place}} on map</a><br><br>
+								  </td>
+							  </tr>
+						  {%endif%}
+							  {% endfor %}
+					  </table>
+					</div>
+				</div>
+
+
+				<div class="btn-block">
+          			<button type="submit" value="Submit" id="submitbtn">Submit</button>
+        		</div>
+			</form>
+			</div>
+	</div>
+
+
+</body>
+</html>
