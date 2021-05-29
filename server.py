@@ -328,11 +328,9 @@ def result():
         global choosen_restaurants
         name = result['name']
         email = result['email']
-        start_date = result['sdate']
-        end_date = result['edate']
-        destination = result['place']
         choosen_type = result.getlist('checklist')
         choosen_rest = result.getlist('place')
+        choosen_restaurants=""
         for i in choosen_rest:
             choosen_restaurants+=" "+i
         print(choosen_restaurants)
@@ -368,8 +366,7 @@ def result():
             options.append('Sky Zone')
             options.append('Snow World')
 
-        else:
-            if (rec == 0):
+        if('must visit' in choosen_type):
                 options.append('Shilparamam')
                 options.append('Nehru Zoological Park')
                 options.append('Hussain Sagar Lake')
@@ -393,7 +390,6 @@ def choosenplaces():
     global choosen_restaurants
     print("choosen:   ", choosen_restaurants)
     rec_rest = predict(choosen_restaurants)
-    choosen_restaurants=""
     print(rec_rest)
     if request.method == 'POST':
         placeresult = request.form.getlist('places')
