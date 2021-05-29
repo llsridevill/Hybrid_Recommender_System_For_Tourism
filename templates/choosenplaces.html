@@ -10,15 +10,15 @@
     <div class="banner">
         <h1>Tourism Recommendation System</h1>
     </div><br><br><br>
-    <div style=" padding-left:20px; width: 50%; height: 100px; float: left;">
-        <center><p style="font-size:30px">Tourist Places Selected</p></center><br>
+    <div style=" width: 50%; height: 100px; float: left;">
+        <center><p style="font-size:30px">Optimal Path Recommended</p></center><br>
         {% for place in result %}
-        <span><img height="30px" width="30px" src="static/images/icons/location.png"/></span><span style="font-size:25px">{{place}}</span><br><br>
+        <span><img style="padding-left:80px" height="30px" width="30px" src="static/images/icons/location.png"/></span><span style="font-size:25px">{{place}}</span><br><br>
         {% endfor %}
     </div>
 
     <div style=" width: 50%; height: 100px; float: right;">
-        <center><p style="font-size:30px">Recommended Restaurants</p></center><br>
+        <center><p style="font-size:30px">Restaurants Recommended</p></center><br><br>
         {% for place in rest_result %}
         <span><img height="30px" width="30px" src="static/images/icons/location.png"/></span><span style="font-size:25px">{{place}}</span><br><br>
         {% endfor %}
